@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Admin Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div>
+          <br/>
+          <h1 class="text-center">BITS Voting DApp: Admin Dashboard</h1>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <p>Candidate Name</p>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="CandidateName" placeholder="Enter Name">
+          </div>
+          <p>Candidate Post</p>
+          <div  class="input-group mb-3">
+                <select class="form-control" id="posts-box">
+                </select>
+          </div>
+
+          <ul id="candidate-list"></ul>
+
+          <button class="btn btn-primary" onclick="App.AdminAddCandidate()">Add Candidate</button>
+          <br/>
+          <br/>
+          <div id="msg_candidate"></div>
+        </div>
+
+        <div class="col-md-1">
+            <div style="border-left: 2px solid lightgray; height: 250px; margin-left: 8px; background-color: green; position: absolute; left: 50%;"></div>
+        </div>
+
+        <div class="col-md-6">
+            <button class="btn btn-primary" onclick="App.CountVotes()">Count Votes</button>
+             <br/>
+            <br/>
+            <select class="form-control" id="posts-box1">
+
+            </select>
+            <br/>
+            <div id="vote-box"></div>
+            
+            
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div>
+          <h2 class="text-center">Add Post</h1>
+          <hr/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <p>Post Name</p>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="postName" placeholder="Enter Post Name">
+          </div>
+
+          <button class="btn btn-primary" onclick="App.AdminAddpost()">Submit Post</button>
+          <br/>
+          <br/>
+          <div id="msg_post"></div>
+        </div>
+        <div class="col-md-1">
+            <div style="border-left: 2px solid lightgray; height: 250px; margin-left: 8px; background-color: green; position: absolute; left: 50%;"></div>
+        </div>
+          <div id="voting_piechart" style="width: 600px; height: 500px;" >
+              <!-- container for 3D Pie Chart -->  
+            </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+    <!-- Custom Scripts -->
+    <script src="admin.js"></script>
+  </body>
+</html>
